@@ -1,6 +1,9 @@
 ## Introduction
 This project involves predicting the popularity of Spotify songs based on various features using machine learning models.
 
+## Origins
+The project is based on a twin project I made on the Dataiku platform. It was rewritten from scratch and expanded.
+
 ## Libraries and Environment
 The project is implemented in Python using Jupyter Notebook.
 It utilizes libraries such as Scikit-learn, Keras, Pandas, and others for various tasks including data manipulation, visualization, natural language processing, and model training.
