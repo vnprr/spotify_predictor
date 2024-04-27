@@ -11,8 +11,7 @@ The environment is set up using Google Colab with specific directory configurati
 
 ## Data Preparation
 ### Datasets
-#### 30,000 Spotify Songs (kaggle.com)
-https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs?resource=download
+#### I. [30,000 Spotify Songs (kaggle.com)](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs?resource=download)
 A dataset of 23 columns containing data on:
 - Track ID
 - Track Name
@@ -35,9 +34,10 @@ A dataset of 23 columns containing data on:
 - Instrumentalness
 - Liveness
 - Valence
-The data was collected from the Spotify platform and primarily focuses on the most popular commercial songs.
-#### Music Artists Popularity (kaggle.com)
-https://www.kaggle.com/datasets/pieca111/music-artists-popularity
+
+The data was collected from the Spotify platform and primarily focuses on the most popular commercial songs. This is main dataset.
+
+#### II. [Music Artists Popularity (kaggle.com)](https://www.kaggle.com/datasets/pieca111/music-artists-popularity)
 A dataset of 10 columns containing data on:
 - MusicBrainz ID
 - Artist Name (MusicBrainz)
@@ -49,7 +49,8 @@ A dataset of 10 columns containing data on:
 - Last.fm Listeners
 - Last.fm Scrobbles
 - Ambiguous Artist
-The data was obtained from Last.fm and MusicBrainz platforms and mainly concerns popular commercial songs.
+
+The data was obtained from Last.fm and MusicBrainz platforms and mainly concerns popular commercial songs. This is an additional collection used to supplement the information.
 
 ### Data Reliability Assessment
 The reliability of both datasets is considered high because the data consists of publicly available information retrieved from Spotify and Last.fm platforms, and the mathematical data was obtained through calculations. The datasets do not include opinions, comments, or subjective information.
@@ -66,17 +67,17 @@ The data is split into training and test sets using an 80/20 split ratio.
 
 ### Model Types
 #### Ridge Regression (Linear Model)
-Utilizes RidgeCV from Scikit-learn. Score: 0.25
-### SVR - deprecated
+Utilizes RidgeCV from Scikit-learn. **Score: 0.25**
+#### SVR - deprecated
 The model was tested and abandoned due to very long training time and low score.
 #### K-Nearest Neighbors (KNN)
-GridSearchCV is employed to optimize the number of neighbors. Score: 0.60
+GridSearchCV is employed to optimize the number of neighbors. **Score: 0.60**
 #### Random Forest
-Trains a RandomForestRegressor with specified hyperparameters. Score: 0.60
+Trains a RandomForestRegressor with specified hyperparameters. **Score: 0.60**
 #### Gradient Boosting (Best Performing Model)
-Trains a GradientBoostingRegressor with a specific set of hyperparameters. This is best-performing model with optimal time and score which was saved and intended for further development of the project. Score: 0.72
+Trains a GradientBoostingRegressor with a specific set of hyperparameters. This is best-performing model with optimal time and score which was saved and intended for further development of the project. **Score: 0.72**
 #### Neural Network
-Implements a Sequential neural network using Keras with various configurations of dense layers. Score: 0.53
+Implements a Sequential neural network using Keras with various configurations of dense layers. **Score: 0.53**
 
 ### Model Evaluation
 Each trained model's performance is evaluated using R-squared scores on both training and test datasets.
